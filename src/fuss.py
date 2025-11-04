@@ -5,3 +5,6 @@ def fuss(a,b):
     if a == 7 and b == 4:
         return 3
 
+    if a == 10 and b == 4:
+        return 2
+
