@@ -1,11 +1,9 @@
 from src.add_a_b_c import add
+import pytest
 
 
-def test_add():
-    assert add(1,0,1)==2
+@pytest.mark.parametrize("a,b,c,expected_resolt",
+                         [(2,3,5,10),(1,2,3,6)] )
+def test_add_a_b_c_expected_resolt(a,b,c,expected_resolt):
+    assert add(a,b,c) == expected_resolt
 
-def test_add02():
-    assert add(5,3,1)==9
-
-def test_add03():
-    assert add(7,2,-1)==8
